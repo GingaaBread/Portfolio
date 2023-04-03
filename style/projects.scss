@@ -1,0 +1,99 @@
+// Imports the Inter font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+// Colour scheme
+$bg: white;
+$prm: #313444;
+
+body.darkmode {
+    $bg: #313444;
+    $prm: #01F482;
+}
+
+body.brightmode {
+    $bg: white;
+    $prm: #313444;
+}
+
+// Default overrides
+
+:root {
+    box-sizing: border-box;
+    background-color: $bg;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, p, body {
+    margin: 0;
+}
+
+body {
+    padding: 2rem 9rem;
+}
+
+ol, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Base Styles
+
+.project {
+    overflow: hidden;
+
+    .project-header {
+        transform: translateX(-2.5rem);
+
+        display: flex;
+        align-items: center;
+    
+        h1 {
+            font-size: 8rem;
+            margin-right: 3rem;
+        }
+    
+        .side-content {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    .title-wrapper {
+        border-top: .2rem solid $prm;
+        border-bottom: .2rem solid $prm;
+
+        padding: 1rem 0 3rem 0;
+        margin: 2rem 0;
+
+        width: 50%;
+
+        h2 {
+            font-size: 4rem;
+            max-width: 45%;
+        }
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p.about {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        
+        max-width: 50%;
+
+        margin-bottom: 1rem;
+    }
+}
