@@ -24,7 +24,16 @@ body.brightmode {
     font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, p, body {
+::selection {
+    color: white;
+    background-color: #313444;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
     margin: 0;
 }
 
@@ -32,7 +41,8 @@ body {
     padding: 2rem 9rem;
 }
 
-ol, li {
+ol,
+li {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,7 +57,10 @@ ol, li {
     justify-content: center;
     align-items: center;
 
-    .text, .media {
+    height: 100vh;
+
+    .text,
+    .media {
         width: 50%;
     }
 
@@ -55,25 +68,14 @@ ol, li {
         display: grid;
         place-items: center;
 
-        .time-bar {
-            .bar {
-                background-color: $snd;
-            }
+        img {
+            object-fit: cover;
+            width: 80%;
+            height: auto;
 
-            .time-step {
-                width: 2rem;
-                height: 2rem;
-
-                border-radius: 50%;
-
-                margin-bottom: 5rem;
-
-                background-color: $prm;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
+            box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
         }
     }
 
@@ -82,12 +84,12 @@ ol, li {
 
         display: flex;
         align-items: center;
-    
+
         h1 {
             font-size: 8rem;
             margin-right: 3rem;
         }
-    
+
         .side-content {
             font-size: 1.2rem;
             letter-spacing: 3px;
@@ -123,7 +125,7 @@ ol, li {
     p.about {
         font-size: 1.2rem;
         letter-spacing: 1px;
-        
+
         margin-bottom: 1rem;
     }
 }

@@ -5,7 +5,21 @@
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3, p, body {
+::-moz-selection {
+  color: white;
+  background-color: #313444;
+}
+
+::selection {
+  color: white;
+  background-color: #313444;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
   margin: 0;
 }
 
@@ -13,7 +27,8 @@ body {
   padding: 2rem 9rem;
 }
 
-ol, li {
+ol,
+li {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -24,26 +39,24 @@ ol, li {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
-.project .text, .project .media {
+.project .text,
+.project .media {
   width: 50%;
 }
 .project .media {
   display: grid;
   place-items: center;
 }
-.project .media .time-bar .bar {
-  background-color: #d8d8d8;
-}
-.project .media .time-bar .time-step {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  margin-bottom: 5rem;
-  background-color: #313444;
-}
-.project .media .time-bar .time-step:last-child {
-  margin-bottom: 0;
+.project .media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: auto;
+  box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
 }
 .project .project-header {
   transform: translateX(-2.5rem);
