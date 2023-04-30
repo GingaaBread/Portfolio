@@ -1,5 +1,5 @@
 // Imports the Inter font from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
 // Colour scheme
 $bg: white;
@@ -7,26 +7,26 @@ $prm: #313444;
 $snd: #d8d8d8;
 
 body.darkmode {
-    $bg: #313444;
-    $prm: #01F482;
+  $bg: #313444;
+  $prm: #01f482;
 }
 
 body.brightmode {
-    $bg: white;
-    $prm: #313444;
+  $bg: white;
+  $prm: #313444;
 }
 
 // Default overrides
 
 :root {
-    box-sizing: border-box;
-    background-color: $bg;
-    font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  background-color: $bg;
+  font-family: "Inter", sans-serif;
 }
 
 ::selection {
-    color: white;
-    background-color: #313444;
+  color: white;
+  background-color: #313444;
 }
 
 h1,
@@ -34,98 +34,115 @@ h2,
 h3,
 p,
 body {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    padding: 2rem 9rem;
+  padding: 2rem 9rem;
 }
 
 ol,
 li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 // Base Styles
 
 .project {
-    overflow: hidden;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  .text,
+  .media {
+    width: 50%;
+  }
+
+  .media {
+    display: grid;
+    place-items: center;
+
+    img {
+      object-fit: cover;
+      width: 80%;
+      height: auto;
+
+      box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  .project-header {
+    transform: translateX(-2.5rem);
 
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    height: 100vh;
-
-    .text,
-    .media {
-        width: 50%;
+    h1 {
+      font-size: 8rem;
+      margin-right: 3rem;
     }
 
-    .media {
-        display: grid;
-        place-items: center;
+    .side-content {
+      font-size: 1.2rem;
+      letter-spacing: 3px;
 
-        img {
-            object-fit: cover;
-            width: 80%;
-            height: auto;
+      height: 100%;
 
-            box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
-        }
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 0.5rem 0;
+      }
     }
+  }
+
+  .title-wrapper {
+    border-top: 0.2rem solid $prm;
+    border-bottom: 0.2rem solid $prm;
+
+    padding: 1rem 0 3rem 0;
+    margin: 2rem 0;
+
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p.about {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    margin-bottom: 1rem;
+  }
+}
+
+.projects li:nth-child(even) {
+  .project {
+    flex-direction: row-reverse;
 
     .project-header {
-        transform: translateX(-2.5rem);
+      transform: translateX(2.5rem);
+      flex-direction: row-reverse;
 
-        display: flex;
-        align-items: center;
-
-        h1 {
-            font-size: 8rem;
-            margin-right: 3rem;
-        }
-
-        .side-content {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-
-            height: 100%;
-
-            display: flex;
-            flex-direction: column;
-
-            p {
-                margin: .5rem 0;
-            }
-        }
+      h1 {
+        margin-left: 3rem;
+      }
     }
 
-    .title-wrapper {
-        border-top: .2rem solid $prm;
-        border-bottom: .2rem solid $prm;
-
-        padding: 1rem 0 3rem 0;
-        margin: 2rem 0;
-
-        h2 {
-            font-size: 4rem;
-        }
-    }
-
-    h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    p.about {
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-
-        margin-bottom: 1rem;
-    }
+    text-align: end;
+  }
 }
