@@ -1,3 +1,53 @@
+// Imports the Inter font from Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+// Colour scheme
+$bg: white;
+$prm: #313444;
+$snd: #d8d8d8;
+
+body.darkmode {
+  $bg: #313444;
+  $prm: #01f482;
+}
+
+body.brightmode {
+  $bg: white;
+  $prm: #313444;
+}
+
+// Default overrides
+
+:root {
+  box-sizing: border-box;
+  background-color: $bg;
+  font-family: "Inter", sans-serif;
+}
+
+::selection {
+  color: white;
+  background-color: #313444;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+}
+
+body {
+  padding: 2rem 9rem;
+}
+
+ol,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -82,5 +132,19 @@ header {
         border-bottom: 1px solid black;
       }
     }
+  }
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+
+  background-color: #1f1f22;
+  padding: .8rem 1.2rem;
+
+  span {
+    font-family: 'Prata', serif;
+    color: white !important;
+    font-size: 3rem;
   }
 }

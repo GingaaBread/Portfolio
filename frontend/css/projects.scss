@@ -1,52 +1,8 @@
-// Imports the Inter font from Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
 // Colour scheme
 $bg: white;
 $prm: #313444;
 $snd: #d8d8d8;
-
-body.darkmode {
-  $bg: #313444;
-  $prm: #01f482;
-}
-
-body.brightmode {
-  $bg: white;
-  $prm: #313444;
-}
-
-// Default overrides
-
-:root {
-  box-sizing: border-box;
-  background-color: $bg;
-  font-family: "Inter", sans-serif;
-}
-
-::selection {
-  color: white;
-  background-color: #313444;
-}
-
-h1,
-h2,
-h3,
-p,
-body {
-  margin: 0;
-}
-
-body {
-  padding: 2rem 9rem;
-}
-
-ol,
-li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
 // Base Styles
 
@@ -65,13 +21,15 @@ li {
   }
 
   .media {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
     img {
       object-fit: cover;
       width: 80%;
       height: auto;
+      margin-right: 1.5rem;
 
       box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
       -webkit-box-shadow: -7px 10px 26px 0px rgba(0, 0, 0, 0.75);
@@ -133,6 +91,15 @@ li {
 .projects li:nth-child(even) {
   .project {
     flex-direction: row-reverse;
+
+    .media {
+      justify-content: flex-start;
+
+      img {
+        margin-right: 0;
+        margin-left: 1.5rem;
+      }
+    }
 
     .project-header {
       transform: translateX(2.5rem);
